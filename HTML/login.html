@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="../JS/login.js"></script>
+</head>
+<body> 
+    <form onsubmit='login()' class="login-form">
+        <div class="login-form-title">
+            <h2>Hello, World!</h2>
+            <p class="login-form-title-greeting"><i class="bi bi-emoji-smile"></i>만나서 반가워요!</p>
+        </div>
+
+        <div class="login-form-input">
+            <label for="id">ID</label>
+            <input type="text" placeholder="ID를 입력해주세요." id="id">
+        </div>
+        <div class="login-form-input">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password를 입력해주세요." id="password">
+        </div>
+        <div class="login-form-footer">
+            
+            <button type="submit"><i class="bi bi-box-arrow-in-right"></i>Login</button>
+            <div class="other-info">
+                <p>계정이 없으신가요? <a href="./register.html">회원가입</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
