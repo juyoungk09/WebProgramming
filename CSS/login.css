@@ -4,8 +4,7 @@ body {
     padding: 0;
     width: 100%;
     margin: 0 auto;
-    /* background-color: #60b1f3f9; */
-    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    background-color: #6e8efb;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +45,7 @@ body {
 }
 
 .login-form h2 {
-    color: #4f46e5;
+    color: #6e8efb;
     font-size: 28px;
     text-align: center;
     margin: 0;
@@ -108,9 +107,7 @@ body {
 }
 
 .login-form-footer button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0.95;
+    transform: scale(1.1);
 }
 
 .login-form-footer .other-info {

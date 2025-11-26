@@ -1,7 +1,7 @@
 
 
 
-const languages = [
+const langs = [
     {
         name: "Elixir",
         image: "./ASSETS/IMAGES/elixir.png"
@@ -47,7 +47,7 @@ const languages = [
         image: "./ASSETS/IMAGES/java.svg"
     }
 ];
-frameworks = [
+const fws = [
     {
         name: "Spring Boot",
         image: "./ASSETS/IMAGES/springboot.webp"
@@ -105,56 +105,73 @@ frameworks = [
         image: "./ASSETS/IMAGES/qwik.png"
       }
     ]
-                 
-const stackList = document.querySelector("LanguageList");
-const frameworkList = document.querySelector("FrameworkList");
+             
+    
+const langList = document.querySelector("LanguageList");
+const fwList = document.querySelector("FrameworkList");
 
-const LanguageList = document.createElement("ul");
-const FrameworkList = document.createElement("ul");
+const langUl = document.createElement("ul");
+const fwUl = document.createElement("ul");
 
 
-languages.forEach(language => {
-    const stackItem = document.createElement("li");
-    stackItem.classList.add("stack-item");
-    stackItem.innerHTML = `
-        <img src="${language.image}" alt="${language.name}">
-        ${language.name}
+langs.forEach(lang => {
+    const langItem = document.createElement("li");
+    langItem.classList.add("stack-item");
+    langItem.innerHTML = `
+        <img src="${lang.image}" alt="${lang.name}">
+        ${lang.name}
     `;
-    stackItem.addEventListener('mouseover', () => {
-        stackItem.classList.add('onhover');
+    langItem.addEventListener('mouseover', () => {
+        langItem.classList.add('onhover');
     });
-    stackItem.addEventListener('mouseleave', () => {
-        stackItem.classList.remove('onhover');
+    langItem.addEventListener('mouseleave', () => {
+        langItem.classList.remove('onhover');
     });
-    LanguageList.appendChild(stackItem);
+    langUl.appendChild(langItem);
 });
-frameworks.forEach(framework => {
-    const frameworkItem = document.createElement("li");
-    frameworkItem.classList.add("stack-item");
-    frameworkItem.innerHTML = `
-        <img src="${framework.image}" alt="${framework.name}">
-        ${framework.name}
+fws.forEach(fw => {
+    const fwItem = document.createElement("li");
+    fwItem.classList.add("stack-item");
+    fwItem.innerHTML = `
+        <img src="${fw.image}" alt="${fw.name}">
+        ${fw.name}
     `;
-    frameworkItem.addEventListener('mouseover', () => {
-        frameworkItem.classList.add('onhover');
+    fwItem.addEventListener('mouseover', () => {
+        fwItem.classList.add('onhover');
     });
-    frameworkItem.addEventListener('mouseleave', () => {
-        frameworkItem.classList.remove('onhover');
+    fwItem.addEventListener('mouseleave', () => {
+        fwItem.classList.remove('onhover');
     });
-    FrameworkList.appendChild(frameworkItem);
+    fwUl.appendChild(fwItem);
 });
 
-stackList.appendChild(LanguageList);
-frameworkList.appendChild(FrameworkList);
+langList.appendChild(langUl);
+fwList.appendChild(fwUl);
 
-const stackItems = document.querySelectorAll('.stack-item');
+const stkItems = document.querySelectorAll('.stack-item');
 
-const aboutContent = document.querySelector('.about-content');
+const aboutContainer = document.querySelector('.about-container');
 
 
 
-stackItems.forEach((item, index) => {
-    setTimeout(() => {
-        item.classList.add('show');
-    }, index * 100); 
+let revealed = false;
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !revealed) {
+            revealed = true;
+
+            stkItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, index * 200);
+            });
+
+            observer.unobserve(aboutContainer); // 필요없으니 해제
+        }
+    });
+}, {
+    threshold: 0.2  // 20% 
 });
+
+observer.observe(aboutContainer);
