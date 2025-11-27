@@ -9,12 +9,12 @@
     background: linear-gradient(180deg, black, #7c3aed);
 }
 .history-section h1 {
-    font-size: 2.8rem;
+    font-size: 6rem;
     font-weight: 700;
     margin-bottom: 4rem;
-    color: transparent;
-    background: linear-gradient(180deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
-    background-clip: text;
+    
+    color: #3b82f6;
+    background: transparent;
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
@@ -53,7 +53,7 @@
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .history-item.visible {
@@ -71,6 +71,7 @@
     left: 50%;
     padding-left: 60px;
     text-align: left;
+    
 }
 
 .history-item::after {
@@ -81,13 +82,24 @@
     border: 4px solid #3b82f6;
     top: 70px;
     z-index: 1;
-    transition: all 0.3s ease;
 }
 
 .history-item:nth-child(odd)::after {
     right: 2px;
 }
+.history-item:nth-child(1)::after {
+    border: 4px solid #5177F6;
+}
+.history-item:nth-child(2)::after {
+    border: 4px solid #7C63F6;
+}
+.history-item:nth-child(3)::after {
+    border: 4px solid #B653CC;
+}
 
+.history-item:nth-child(4)::after {
+    border: 4px solid #EE5781;
+}
 .history-item:nth-child(even)::after {
     left: 2px;
 }
@@ -102,7 +114,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .history-year {
-    color: #3b82f6;
+    color: #6e8efb;
     background: transparent;
     font-size: 1.6rem;
     font-weight: 700;
@@ -121,7 +133,6 @@
     width: 0;
     height: 2px;
     background: #3b82f6;
-    transition: width 0.3s ease;
 }
 
 .history-content:hover .history-year::after {

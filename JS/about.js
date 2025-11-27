@@ -158,7 +158,7 @@ const observer = new IntersectionObserver((entries) => {
             stkItems.forEach((item, index) => {
                 setTimeout(() => {
                     item.classList.add('show');
-                }, index * 90);
+                }, index * 50);
             });
 
             observer.unobserve(aboutContainer); 

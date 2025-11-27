@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const word = [
-    "Hello World!", "Juyoung Kim", "AnA",
-    "SRIH 120th", "Frontend Developer", "Algolithms"
+        "Hello World!", "Juyoung Kim", "AnA", "solved.ac Platinum",
+        "SRIH 120th", "Frontend Developer", "Algorithms"
     ];
 
     function spawnText() {
