@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             greetingTitle.removeChild(tCursor);
             greetingSubtitle.appendChild(sCursor);
-            setTimeout(typeSubtitle, 500);
+            setTimeout(typeSubtitle, 200);
         }
     }
 

@@ -98,7 +98,7 @@ const fws = [
       },
       {
         name: "Qwik",
-        image: "./ASSETS/IMAGES/qwik.png"
+        image: "./ASSETS/IMAGES/qwik.png" 
       },
       {
         name: "QwikCity",
@@ -136,12 +136,6 @@ fws.forEach(fw => {
         <img src="${fw.image}" alt="${fw.name}">
         ${fw.name}
     `;
-    fwItem.addEventListener('mouseover', () => {
-        fwItem.classList.add('onhover');
-    });
-    fwItem.addEventListener('mouseleave', () => {
-        fwItem.classList.remove('onhover');
-    });
     fwUl.appendChild(fwItem);
 });
 
@@ -164,14 +158,14 @@ const observer = new IntersectionObserver((entries) => {
             stkItems.forEach((item, index) => {
                 setTimeout(() => {
                     item.classList.add('show');
-                }, index * 200);
+                }, index * 90);
             });
 
-            observer.unobserve(aboutContainer); // 필요없으니 해제
+            observer.unobserve(aboutContainer); 
         }
     });
 }, {
-    threshold: 0.2  // 20% 
+    threshold: 0.2  // 20%
 });
 
 observer.observe(aboutContainer);

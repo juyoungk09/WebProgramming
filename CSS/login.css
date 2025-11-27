@@ -106,9 +106,6 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
-.login-form-footer button:hover {
-    transform: scale(1.1);
-}
 
 .login-form-footer .other-info {
     display: flex;
