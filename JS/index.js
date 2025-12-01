@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const t = 'Hello, World';
+    const t = 'Ein Volk, Ein Reich, Ein Führer';
     const s = '풀스택 개발자 김주영입니다.';
     let tIndex = 0;
     let sIndex = 0;

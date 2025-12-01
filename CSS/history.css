@@ -33,7 +33,7 @@
 .history-timeline::before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 8px;
     background: linear-gradient(180deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
     top: 0;
     bottom: 0;
