@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const t = 'Ein Volk, Ein Reich, Ein Führer';
-    const s = '풀스택 개발자 김주영입니다.';
+    const t = 'Hello, World!';
+    const s = '프론트엔드 개발자 김주영입니다.';
     let tIndex = 0;
     let sIndex = 0;
     const greetingTitle = document.getElementById('typing-title');

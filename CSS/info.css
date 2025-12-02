@@ -50,23 +50,36 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
 .info-card h3 {
+    background: transparent;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #e0e7ff;
 }
 
 .info-card p {
+    background: transparent;
     color: #c7d2fe;
     line-height: 1.6;
     font-size: 1rem;
 }
-
+.info-card i {
+    background: transparent;
+    font-size: 2rem;
+    color: #6e8efb;
+}
+.info-card:nth-child(1) i {
+    color: #6e8efb;
+}
+.info-card:nth-child(2) i {
+    color: #7C63F6;
+}
+.info-card:nth-child(3) i {
+    color: #B653CC;
+}
+.info-card:nth-child(4) i {
+    color: #EE5781;
+}
 @media (max-width: 768px) {
     .info-title {
         font-size: 2.5rem;

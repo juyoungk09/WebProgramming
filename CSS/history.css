@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 270vh;
     padding: 6rem 5% 4rem;
     background-color: transparent;
     background: linear-gradient(180deg, black, #7c3aed);
@@ -53,7 +53,7 @@
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: all 2s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .history-item.visible {
@@ -173,6 +173,66 @@
     left: 0;
     top: -2px;
 }
+.future {
+    padding-block: 20rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.future *  {
+    background: transparent;
+}
+.future p{
+    color: #e2e8f0;
+    font-size: 1.5rem;
+}
+.bucket-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.bucket-list li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    /* position: relative; */
+    overflow: hidden;
+    border-left: 3px solid #6e8efb;
+    backdrop-filter: blur(5px);
+}
+
+
+.bucket-list li i {
+    font-size: 1.3rem;
+    color: #6e8efb;
+    transition: transform 0.3s ease;
+}
+
+.bucket-list li:hover i {
+    transform: scale(1.2) rotate(5deg);
+    color: #f8f9ff;
+}
+.bucket-list li:hover{
+    color: #6e8efb
+}
+.bucket-list li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 @media (max-width: 768px) {
     .history-section {
@@ -188,7 +248,7 @@
         width: 100%;
         padding-left: 70px;
         padding-right: 0;
-        text-align: left !important;
+        text-align: left;
     }
     
     .history-item:nth-child(even) {
@@ -197,7 +257,7 @@
     }
     
     .history-item::after {
-        left: 30px !important;
+        left: 30px;
         width: 33px;
     }
     

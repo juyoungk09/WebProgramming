@@ -112,13 +112,14 @@ const fwList = document.querySelector("FrameworkList");
 
 const langUl = document.createElement("ul");
 const fwUl = document.createElement("ul");
-
-
+const basePath = window.location.pathname.includes("/HTML/")
+  ? "../"
+  : "./";
 langs.forEach(lang => {
     const langItem = document.createElement("li");
     langItem.classList.add("stack-item");
     langItem.innerHTML = `
-        <img src="${lang.image}" alt="${lang.name}">
+        <img src="${basePath+lang.image}" alt="${lang.name}">
         ${lang.name}
     `;
     langItem.addEventListener('mouseover', () => {
@@ -133,7 +134,7 @@ fws.forEach(fw => {
     const fwItem = document.createElement("li");
     fwItem.classList.add("stack-item");
     fwItem.innerHTML = `
-        <img src="${fw.image}" alt="${fw.name}">
+        <img src="${basePath+fw.image}" alt="${fw.name}">
         ${fw.name}
     `;
     fwUl.appendChild(fwItem);
@@ -148,12 +149,12 @@ const aboutContainer = document.querySelector('.about-container');
 
 
 
-let revealed = false;
+let isShow = false;
 
-const observer = new IntersectionObserver((entries) => {
+const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting && !revealed) {
-            revealed = true;
+        if (entry.isIntersecting && !isShow) {
+            isShow = true;
 
             stkItems.forEach((item, index) => {
                 setTimeout(() => {
@@ -161,11 +162,11 @@ const observer = new IntersectionObserver((entries) => {
                 }, index * 50);
             });
 
-            observer.unobserve(aboutContainer); 
+            obs.unobserve(aboutContainer); 
         }
     });
 }, {
     threshold: 0.2  // 20%
 });
 
-observer.observe(aboutContainer);
+obs.observe(aboutContainer);

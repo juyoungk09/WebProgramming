@@ -13,7 +13,7 @@
 <body> 
     <form onsubmit='login()' class="login-form">
         <div class="login-form-title">
-            <h2>Hello, World!</h2>
+            <h2>로그인</h2>
             <p class="login-form-title-greeting"><i class="bi bi-emoji-smile"></i>만나서 반가워요!</p>
         </div>
 
@@ -26,10 +26,17 @@
             <input type="password" placeholder="Password를 입력해주세요." id="password">
         </div>
         <div class="login-form-footer">
-            
-            <button type="submit"><i class="bi bi-box-arrow-in-right"></i>Login</button>
+            <div class="login-form-remember">
+                <input id="remember" type="checkbox">
+                <label for="remember">로그인 정보 저장</label>
+            </div>
+            <button type="submit"><i class="bi bi-box-arrow-in-right"></i>로그인하기</button>
             <div class="other-info">
-                <p>계정이 없으신가요? <a href="./register.html">회원가입</a></p>
+                <p>계정이 없으신가요? <span>회원가입</span></p>
+                <div class="find-info">
+                    <button type="button"> <i class="bi bi-person"></i>아이디 찾기</button>
+                    <button type="button"> <i class="bi bi-lock"></i>비밀번호 찾기</button>
+                </div>
             </div>
         </div>
     </form>
